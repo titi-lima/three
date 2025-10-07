@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #111 0%, #050505 60%, #000 100%);
+  color: #e4e7f1;
+}
+
+#overlay {
+  position: absolute;
+  inset: 1.5rem;
+  max-width: 420px;
+  padding: 1.75rem;
+  background: rgba(8, 10, 20, 0.6);
+  border: 1px solid rgba(115, 195, 255, 0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 80px rgba(8, 10, 22, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#overlay h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 2.6vw, 2.75rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#overlay p {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+#reset {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(115, 195, 255, 0.45);
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(51, 121, 255, 0.18), rgba(38, 255, 210, 0.12));
+  color: inherit;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#reset:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 40px rgba(38, 255, 210, 0.25);
+}
+
+#status {
+  opacity: 0.8;
+}
+
+#experience {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  #overlay {
+    inset: 1rem;
+    max-width: unset;
+    padding: 1.3rem;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+}
+
